@@ -25,10 +25,10 @@
 
 ## About Me
 
-I enjoy turning ideas into useful, reliable, and well-designed digital products. I’m interested in software development, problem-solving, and continuously improving my craft through hands-on projects.
+I enjoy turning ideas into useful, reliable, and well-designed digital products. My public work spans security tooling, AI-assisted reconnaissance, embedded robotics, and interactive browser experiences.
 
 - Building practical projects and learning by doing
-- Exploring modern tools, frameworks, and development workflows
+- Exploring cybersecurity, AI integrations, embedded systems, and modern development workflows
 - Interested in collaborating on meaningful open-source and product ideas
 - Always open to learning something new
 
@@ -41,6 +41,8 @@ I enjoy turning ideas into useful, reliable, and well-designed digital products.
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
@@ -62,6 +64,25 @@ I enjoy turning ideas into useful, reliable, and well-designed digital products.
 | **Recon-2.0** | Self-reinforcing reconnaissance loop that connects subdomain discovery, live-host probing, port scanning, crawling, fuzzing, secret scanning, and vulnerability detection. | [Code](https://github.com/atharv201227/Recon-2.0) |
 
 > Security tools are intended for authorized testing, bug bounty programs, and systems you own or have permission to assess.
+
+## More From My Repositories
+
+- **[Reconnaissance 1.1](https://github.com/atharv201227/reconnaissance1.1)** — Interactive Python-based bug bounty reconnaissance and enumeration helper.
+- **[Line Follower 1.1](https://github.com/atharv201227/line-follower-1.1-)** — C++ robotics project with an onboard access point and browser-based remote control interface.
+- **[Line Follower 1.0](https://github.com/atharv201227/line-follower-1.0)** — Earlier line-following robotics build.
+
+## Playable Browser Games
+
+Try the mini-game collection built for this profile:
+
+<div align="center">
+
+[![Play Atharv Arcade](https://img.shields.io/badge/PLAY-ATHARV%20ARCADE-56e0ff?style=for-the-badge&labelColor=07111f)](https://atharv201227.github.io/atharv201227/games/arcade/)
+[![Game Source](https://img.shields.io/badge/SOURCE-GAME%20FILES-78f0ba?style=for-the-badge&labelColor=07111f)](https://github.com/atharv201227/atharv201227/tree/master/games)
+
+</div>
+
+The arcade includes **Dino Runner** and **Flappy Flight**, with keyboard, mouse, and touch-friendly controls, score tracking, restart states, and game-over screens.
 
 ## GitHub Stats
 

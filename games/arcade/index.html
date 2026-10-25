@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="manus-game-loading-screen" content="1">
+  <title>Atharv Arcade</title>
+  <link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
+<link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
+
+  <style>
+    :root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+    * { box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #07111f; }
+    body { display: grid; place-items: center; color: #eef6ff; }
+    #loading { position: fixed; inset: 0; display: grid; place-items: center; background: radial-gradient(circle at 50% 20%, #183956 0, #07111f 60%); }
+    #card { width: min(560px, calc(100vw - 40px)); padding: 42px; border: 1px solid rgba(86,224,255,.55); background: rgba(10,27,46,.88); box-shadow: 0 22px 80px rgba(0,0,0,.35); }
+    .eyebrow { color: #56e0ff; font-size: 12px; letter-spacing: .22em; font-weight: 800; }
+    h1 { margin: 18px 0 8px; font-size: clamp(34px, 8vw, 60px); line-height: .95; letter-spacing: -.05em; }
+    p { color: #9bb2c9; margin: 0 0 24px; }
+    progress { display: block; width: 100%; height: 8px; accent-color: #56e0ff; }
+    #loading-status { margin-top: 12px; color: #eef6ff; font-size: 14px; }
+    #loading-notice { color: #ffad66; font-size: 13px; margin-top: 16px; }
+    button { border: 1px solid #56e0ff; background: rgba(86,224,255,.12); color: #eef6ff; padding: 10px 16px; cursor: pointer; font-weight: 700; }
+    button:hover, button:focus-visible { background: rgba(86,224,255,.25); outline: none; }
+    canvas { display: block; width: 100vw; height: 100vh; }
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+  <section id="loading" aria-live="polite">
+    <div id="card">
+      <div class="eyebrow">ATHARV ARCADE / GAME BOOT</div>
+      <h1>Two quick games.<br>One high score.</h1>
+      <p>Dino Runner and Flappy Flight are getting ready.</p>
+      <progress id="loading-progress" aria-label="Download progress"></progress>
+      <div id="loading-status">Loading arcade…</div>
+      <div id="loading-notice" hidden></div>
+      <button id="loading-retry" type="button" hidden>Retry</button>
+      <noscript>JavaScript is required to play this game.</noscript>
+    </div>
+  </section>
+  <canvas id="canvas">Your browser does not support the HTML canvas element.</canvas>
+  <script>
+    (() => {
+      const config = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":3757876,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+      const threads = false;
+      const canvas = document.getElementById('canvas');
+      const loading = document.getElementById('loading');
+      const progress = document.getElementById('loading-progress');
+      const status = document.getElementById('loading-status');
+      const notice = document.getElementById('loading-notice');
+      const retry = document.getElementById('loading-retry');
+      let failed = false;
+      let ready = false;
+      let lastProgressAt = performance.now();
+      const startedAt = lastProgressAt;
+      const updateNotice = () => {
+        if (failed || ready || performance.now() - startedAt < 30000) return;
+        notice.hidden = false;
+        retry.hidden = false;
+        notice.textContent = performance.now() - lastProgressAt >= 30000
+          ? 'No recent loading progress. You can keep waiting or retry.'
+          : 'Still loading. You can keep waiting or retry.';
+      };
+      const timer = setInterval(updateNotice, 1000);
+      const stop = () => clearInterval(timer);
+      const fail = (error) => {
+        if (failed || ready) return;
+        failed = true;
+        stop();
+        console.error('[atharv-arcade-loading] Startup failed', error);
+        status.textContent = 'Unable to load the arcade. Please retry.';
+        progress.hidden = true;
+        retry.hidden = false;
+      };
+      const onProgress = (current, total) => {
+        if (failed || ready) return;
+        lastProgressAt = performance.now();
+        if (Number.isFinite(total) && total > 0 && Number.isFinite(current)) {
+          progress.max = total;
+          progress.value = Math.min(current, total);
+          status.textContent = current >= total ? 'Starting arcade…' : `${Math.floor(current / total * 100)}%`;
+        } else {
+          progress.removeAttribute('value');
+          status.textContent = 'Loading arcade…';
+        }
+      };
+      retry.addEventListener('click', () => window.location.reload());
+      window.addEventListener('error', (event) => fail(event.error || new Error('Engine startup error')));
+      window.addEventListener('unhandledrejection', (event) => fail(event.reason || new Error('Engine startup rejected')));
+      const start = async () => {
+        try {
+          const missing = Engine.getMissingFeatures({ threads });
+          if (missing.length) throw new Error(`Missing browser features: ${missing.join(', ')}`);
+          const engine = new Engine({ ...config, canvas });
+          await engine.startGame({ onProgress });
+          if (failed) return;
+          ready = true;
+          stop();
+          requestAnimationFrame(() => requestAnimationFrame(() => { loading.hidden = true; }));
+        } catch (error) { fail(error); }
+      };
+      const script = document.createElement('script');
+      script.src = 'index.js';
+      script.addEventListener('load', start, { once: true });
+      script.addEventListener('error', () => fail(new Error('Engine script could not be loaded')), { once: true });
+      document.head.appendChild(script);
+    })();
+  </script>
+</body>
+</html>
+
