@@ -73,11 +73,11 @@ I enjoy turning ideas into useful, reliable, and well-designed digital products.
 
 ## Playable Browser Games
 
-Try the mini-game collection built for this profile:
+Try the mini-game collection built for this profile. The play button uses a static CDN URL so it works even when GitHub Pages is not enabled:
 
 <div align="center">
 
-[![Play Atharv Arcade](https://img.shields.io/badge/PLAY-ATHARV%20ARCADE-56e0ff?style=for-the-badge&labelColor=07111f)](https://atharv201227.github.io/atharv201227/games/arcade/)
+[![Play Atharv Arcade](https://img.shields.io/badge/PLAY-ATHARV%20ARCADE-56e0ff?style=for-the-badge&labelColor=07111f)](https://raw.githack.com/atharv201227/atharv201227/master/games/arcade/index.html)
 [![Game Source](https://img.shields.io/badge/SOURCE-GAME%20FILES-78f0ba?style=for-the-badge&labelColor=07111f)](https://github.com/atharv201227/atharv201227/tree/master/games)
 
 </div>
