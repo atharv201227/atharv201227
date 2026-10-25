@@ -57,11 +57,11 @@ I enjoy turning ideas into useful, reliable, and well-designed digital products.
 
 | Project | Description | Links |
 | --- | --- | --- |
-| **Project One** | A short, outcome-focused description of your best project. | [Code](https://github.com/atharv201227) |
-| **Project Two** | A short description highlighting the problem solved or technology used. | [Code](https://github.com/atharv201227) |
-| **Project Three** | A short description of another project, experiment, or contribution. | [Code](https://github.com/atharv201227) |
+| **AerisRecon** | AI-powered bug bounty reconnaissance framework for attack-surface mapping, exposure detection, automated screenshots, and professional security reports. | [Code](https://github.com/atharv201227/AerisRecon) |
+| **Scraper-1.1** | Authorized recon-phase crawler that discovers pages, JavaScript files, secrets, endpoints, and produces AI-assisted security analysis reports. | [Code](https://github.com/atharv201227/Scraper-1.1) |
+| **Recon-2.0** | Self-reinforcing reconnaissance loop that connects subdomain discovery, live-host probing, port scanning, crawling, fuzzing, secret scanning, and vulnerability detection. | [Code](https://github.com/atharv201227/Recon-2.0) |
 
-> Replace these examples with your real projects and link directly to their repositories.
+> Security tools are intended for authorized testing, bug bounty programs, and systems you own or have permission to assess.
 
 ## GitHub Stats
 
