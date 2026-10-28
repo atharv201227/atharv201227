@@ -96,7 +96,7 @@ The arcade includes **Dino Runner** and **Flappy Flight**, with keyboard, mouse,
 </div>
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=atharv201227&theme=tokyo-night&hide_border=true&area=true&cache_seconds=1800" alt="Atharv's GitHub contribution activity" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=atharv201227&theme=tokyonight" alt="Atharv's GitHub contribution activity" />
 </div>
 
 ## What I'm Working On
