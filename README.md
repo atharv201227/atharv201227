@@ -87,12 +87,16 @@ The arcade includes **Dino Runner** and **Flappy Flight**, with keyboard, mouse,
 ## GitHub Stats
 
 <div align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=atharv201227&show_icons=true&hide_border=true&theme=tokyonight&rank_icon=github" alt="Atharv's GitHub statistics" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=atharv201227&layout=compact&hide_border=true&theme=tokyonight" alt="Atharv's top languages" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=atharv201227&show_icons=true&hide_border=true&theme=tokyonight&rank_icon=github&cache_seconds=1800" alt="Atharv's GitHub statistics" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=atharv201227&layout=compact&hide_border=true&theme=tokyonight&cache_seconds=1800" alt="Atharv's top languages" />
 </div>
 
 <div align="center">
-  <img src="https://streak-stats.demolab.com?user=atharv201227&theme=tokyonight&hide_border=true" alt="Atharv's GitHub streak" />
+  <img src="https://streak-stats.demolab.com?user=atharv201227&theme=tokyonight&hide_border=true&cache_seconds=1800" alt="Atharv's GitHub streak" />
+</div>
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=atharv201227&theme=tokyo-night&hide_border=true&area=true&cache_seconds=1800" alt="Atharv's GitHub contribution activity" />
 </div>
 
 ## What I'm Working On
