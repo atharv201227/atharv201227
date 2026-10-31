@@ -110,6 +110,8 @@ The arcade includes **Dino Runner** and **Flappy Flight**, with keyboard, mouse,
 
 <div align="center">
 
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/atharv201227)
+
 </div>
 
 ---
